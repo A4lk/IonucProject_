@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="warning" class="card">
+    <ion-buttons>
+      <ion-button (click)="cansel()">الغاء</ion-button>
+    </ion-buttons>
+    <ion-grid>
+      <ion-row>
+        <ion-col offset="5">
+
+          <ion-title>السلة</ion-title>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-item-sliding *ngFor="let x of info;">
+    <ion-card>
+ <ion-list >
+
+  <ion-item lines="none">
+    {{x.data().iryan}}
+  </ion-item>
+  <ion-item>
+    السعر : {{x.data().price}}
+  </ion-item>
+
+<ion-button (click)="delete(x)" color="danger"><ion-icon name="trash" >
+
+</ion-icon></ion-button>
+ </ion-list>
+    </ion-card>
+</ion-item-sliding>
+
+
+  </ion-content>

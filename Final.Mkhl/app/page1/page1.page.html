@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-grid>
+      <ion-row>
+        <ion-col offset="3">
+          <ion-title>تسجيل الدخول </ion-title>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-card>
+    <ion-input placeholder=" ادخل الايميل" 
+    type="email" [(ngModel)]="email">
+    
+    </ion-input>
+    <ion-input placeholder="ادخل الرقم السري" 
+    type="password" [(ngModel)]="password">
+    
+    </ion-input>
+    <ion-button expand="full" 
+    color="warning" (click)="methodlogin()">
+      تسجيل الدخول
+    </ion-button>
+    </ion-card>
+    
+      <ion-grid>
+        <ion-row>
+          <ion-col size="18" size-lg="10" size-md="10"
+          size-sm="8" size-xs="12">
+            <img src="assets/img/7.jpg"/>
+
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+    
+</ion-content>

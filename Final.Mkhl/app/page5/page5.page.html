@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" color="light">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>  
+    <ion-title>UI ionic components</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-segment [(ngModel)]="type" color="success">
+  <ion-segment-button value="Image">
+    Images
+  </ion-segment-button>
+
+  <ion-segment-button value="Video">
+    Video
+  </ion-segment-button>
+</ion-segment>
+<div [ngSwitch]="type">
+  <ion-list *ngSwitchCase="'Image'">
+  <ion-item *ngFor="let x of images">
+
+
+   <ion-avatar>
+      <img src="assets/img/{{x.pic}}"/>
+    </ion-avatar>
+    <ion-item lines="none">  {{x.name}}</ion-item>
+  
+   
+
+
+
+     
+    </ion-item>
+  </ion-list>
+  <ion-list *ngSwitchCase="'Video'">
+<p>Viedo</p>
+  </ion-list>
+</div>
+</ion-content>
+
+<ion-tab-bar slot="bottom" color="light">
+
+  <ion-tab-button tab="API" (click)="moveapi()">
+    <ion-icon color="dark" name="person-circle-sharp"></ion-icon>
+    <ion-label>API</ion-label>
+  </ion-tab-button>
+  
+  <ion-tab-button tab="Google">
+  <ion-icon color="dark" name="home-sharp"></ion-icon>
+  <ion-label>Google</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="Details" (click)="moveshow()">
+  <ion-icon name="calendar-sharp" color="dark"></ion-icon>
+  <ion-label>Details</ion-label>
+  </ion-tab-button>
+  
+  <ion-tab-button tab="Ionic" (click)="moveionic()">
+  <ion-icon name="add-circle-sharp" color="dark"></ion-icon>  
+  <ion-label>Ionic</ion-label>      
+  </ion-tab-button>
+
+ </ion-tab-bar>
+

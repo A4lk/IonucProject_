@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" color="light">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Weather</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+   
+    <ion-input placeholder="Enter City" [(ngModel)]="cities"></ion-input>
+<ion-button (click)="getData()">
+Click
+</ion-button>
+
+    </ion-item>
+
+   <ion-grid >
+   
+  <ion-row >
+  <ion-col offset="2" > Country :{{country}} </ion-col>
+</ion-row>
+ <ion-row>
+  <ion-col offset="2"> City :{{city}}  </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col offset="2" >Weather : {{desc}}  </ion-col>
+    </ion-row>
+   
+</ion-grid>
+
+
+</ion-content>
+
+<ion-tab-bar slot="bottom" color="light">
+
+  <ion-tab-button tab="API" (click)="moveapi()">
+    <ion-icon color="dark" name="person-circle-sharp"></ion-icon>
+    <ion-label>API</ion-label>
+  </ion-tab-button>
+  
+  <ion-tab-button tab="Google">
+  <ion-icon color="dark" name="home-sharp"></ion-icon>
+  <ion-label>Google</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="Details" (click)="moveshow()">
+  <ion-icon name="calendar-sharp" color="dark"></ion-icon>
+  <ion-label>Details</ion-label>
+  </ion-tab-button>
+  
+  <ion-tab-button tab="Ionic" (click)="moveionic()">
+  <ion-icon name="add-circle-sharp" color="dark"></ion-icon>  
+  <ion-label>Ionic</ion-label>      
+  </ion-tab-button>
+
+ </ion-tab-bar>
+

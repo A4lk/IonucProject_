@@ -1,0 +1,187 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary" color="dark">
+    <ion-grid>
+      <ion-row>
+        <ion-col offset="4">
+          <ion-title>
+            نخبة العود
+          </ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-buttons slot="start" color="light">
+    
+      <ion-back-button></ion-back-button>
+
+      <ion-button  (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+
+        <ion-button (click)="openModel()">
+<ion-icon name="cart-outline"></ion-icon>
+        </ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="s" color="light">
+  <img src="assets/img/6.jpg"/>
+  <ion-item color="warning">
+  <ion-grid>
+    <ion-row>
+      <ion-col offset="4">
+        
+          <h3 > مرحبا بكم</h3>
+          <ion-button color="warning" (click)="signup()">سجل الان</ion-button>
+أو
+          <ion-button color="warning" (click)="login()"> 
+            تسجيل الدخول
+          </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col offset="4">
+        <h2> جميع منتجاتنا</h2>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list >
+    
+<ion-card >
+  <ion-grid color="light" >
+    <ion-row size="1">
+      <ion-col size="12">
+        <img src="assets/img/1.jpg"/>
+      </ion-col>
+       <ion-col offset="4">
+          <h3>السعر : 120</h3>
+        </ion-col>
+    </ion-row>
+    <ion-col offset="5">
+      <ion-button color="warning" expand="block" (click)="Check1()">اضافة</ion-button>
+    </ion-col>
+  </ion-grid>
+</ion-card>
+
+
+<ion-card >
+  <ion-grid color="light" >
+    <ion-row size="1">
+      <ion-col size="12">
+        <img src="assets/img/2.jpg"/>
+      </ion-col>
+       <ion-col offset="4">
+          <h3>السعر : 80</h3>
+        </ion-col>
+    </ion-row>
+    <ion-col offset="5">
+      <ion-button color="warning" expand="block" (click)="Check2()">اضافة</ion-button>
+    </ion-col>
+  </ion-grid>
+</ion-card>
+
+
+<ion-card >
+  <ion-grid color="light" >
+    <ion-row size="1">
+      <ion-col size="12">
+        <img src="assets/img/3.jpg"/>
+      </ion-col>
+       <ion-col offset="4">
+          <h3>السعر : 200</h3>
+        </ion-col>
+    </ion-row>
+    <ion-col offset="5">
+      <ion-button color="warning" expand="block" (click)="Check3()">اضافة</ion-button>
+    </ion-col>
+  </ion-grid>
+</ion-card>
+
+
+<ion-card >
+  <ion-grid color="light" >
+    <ion-row size="1">
+      <ion-col size="12">
+        <img src="assets/img/4.jpg"/>
+      </ion-col>
+       <ion-col offset="4">
+          <h3>السعر : 70</h3>
+        </ion-col>
+    </ion-row>
+    <ion-col offset="5">
+      <ion-button color="warning" expand="block" (click)="Check4()">اضافة</ion-button>
+    </ion-col>
+  </ion-grid>
+</ion-card>
+
+
+<ion-card >
+  <ion-grid color="light" >
+    <ion-row size="1">
+      <ion-col size="12">
+        <img src="assets/img/5.jpg"/>
+      </ion-col>
+       <ion-col offset="4">
+          <h3>السعر : 135</h3>
+        </ion-col>
+    </ion-row>
+    <ion-col offset="5">
+      <ion-button color="warning" expand="block" (click)="Check5()">اضافة</ion-button>
+    </ion-col>
+  </ion-grid>
+</ion-card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ion-list>
+</ion-content>
+
+<ion-tab-bar slot="bottom" color="light">
+
+  
+  
+  <ion-tab-button tab="Google" (click)="moveGoogle()">
+  <ion-icon color="dark" name="home-sharp"></ion-icon>
+  <ion-label>الموقع</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="Home" (click)="moveapi()">
+    <ion-icon color="dark" name="person-circle-sharp"></ion-icon>
+    <ion-label>الصفحة الرئيسية</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="Profile" (click)="moveshow()">
+  <ion-icon name="calendar-sharp" color="dark"></ion-icon>
+  <ion-label>الملف الشخصي</ion-label>
+  </ion-tab-button>
+  
+ 
+
+ </ion-tab-bar>
+
+

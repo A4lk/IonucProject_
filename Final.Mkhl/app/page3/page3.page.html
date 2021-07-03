@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar class="m" color="dark">
+    <ion-grid>
+      <ion-row>
+        <ion-col offset="4">
+          <ion-title>الملف الشخصي</ion-title>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="10">
+        <img src="assets/img/10.jpg"/>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item color="light"></ion-item>
+  <ion-item color="warning">
+  <ion-grid>
+    <ion-row>
+      
+      <ion-col offset="2">
+        <h4>العود رائحة الاصالة
+        </h4>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+ 
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="warning" (click)="add()">
+      <ion-icon name="add">
+      </ion-icon>
+  
+    </ion-fab-button>
+  </ion-fab>
+  <ion-card *ngFor="let x of item;let i=index" >
+<ion-list>
+  <ion-avatar>
+    <img src="assets/img/8.png"/>
+  </ion-avatar>
+  <ion-item lines="none"> الاسم الاول : {{x.data().Fname}}
+    <ion-icon name="create"  slot="end"  color="primary" (click)="updatename(x)"></ion-icon>
+  <ion-icon name="trash" slot="end" color="danger" (click)="delete(x)"></ion-icon>
+  </ion-item>
+  
+
+
+  <ion-item lines="none">
+    
+    <ion-card-title> الاسم الثاني :  {{x.data().Lname}} </ion-card-title> 
+    <ion-icon name="create"  slot="end"  color="primary" (click)="updatelname(x)"></ion-icon>
+    <ion-icon name="trash" slot="end" color="danger" (click)="delete(x)"></ion-icon>
+
+  </ion-item>
+  <ion-item lines="none">
+  
+    <ion-card-title> رقم الجوال : {{x.data().phonenumber}}</ion-card-title>
+<ion-icon name="create"  slot="end"  color="primary" (click)="updatephone(x)"></ion-icon>
+<ion-icon name="trash" slot="end"  color="danger" (click)="delete(x)"></ion-icon>
+
+  </ion-item>
+    <ion-item lines="none">
+
+  
+</ion-item>
+
+</ion-list>
+</ion-card>
+</ion-content>
+
+<ion-tab-bar slot="bottom" color="light">
+
+  
+  
+  <ion-tab-button tab="Google" (click)="movetoGoogle()">
+  <ion-icon color="dark" name="home-sharp"></ion-icon>
+  <ion-label>الموقع</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="Home" (click)="movetohome()">
+    <ion-icon color="dark" name="person-circle-sharp"></ion-icon>
+    <ion-label>الصفحة الرئيسة</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="Profile" (click)="moveshow()">
+  <ion-icon name="calendar-sharp" color="dark"></ion-icon>
+  <ion-label>الملف الشخصي</ion-label>
+  </ion-tab-button>
+  
+ 
+
+ </ion-tab-bar>
+
+
